@@ -18,8 +18,8 @@ function App() {
   return (
     <div className="App">
       {gameStage === 'start' && <StartScreen />}
-      {gameStage === 'start' && <StartScreen />}
-      {gameStage === 'start' && <StartScreen />}
+      {gameStage === 'game' && <StartScreen />}
+      {gameStage === 'end' && <StartScreen />}
     </div>
   );
 }
