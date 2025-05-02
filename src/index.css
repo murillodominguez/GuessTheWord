@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
 
+*{
+  font-family: "Cascadia Code", sans-serif;
+}
+
 html, body {
   height: 100dvh;
 }
@@ -8,20 +12,16 @@ body {
   padding: 0;
   margin: 0;
   background-color: rgb(43, 43, 43);
+  color: white;
 }
 
 button {
-  font-family: "Cascadia Code", sans-serif;
   font-size: 3em;
   padding: 25px;
   border: 0;
   background-color: transparent;
-  outline: 0;
-  transition: ease-in all 300ms;
 }
 
 button:hover {
   cursor: pointer;
-  color: white;
-  scale: 110%;
 }

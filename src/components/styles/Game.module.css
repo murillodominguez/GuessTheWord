@@ -1,0 +1,75 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sendLetter {
+  font-size: 1.2em;
+  border: solid 1px rgb(180, 180, 180);
+  padding: 5px;
+  height: 100%;
+  border-radius: 8px;
+  background-color: rgb(212, 212, 212);
+  transition: ease-in all 300ms;
+}
+
+.sendLetter:hover{
+  background-color: rgb(192, 192, 192);
+}
+
+.letterInput {
+  font-size: 1.1em;
+  border: solid 1px rgb(180, 180, 180);
+  width: 40px;
+  height: 100%;
+  border-radius: 8px;
+  padding: 0;
+  text-align: center;
+}
+
+.letterInput:focus{
+  outline: none;
+}
+
+form {
+  height: 40px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+@keyframes minecraft{
+  0% {scale: 98%}
+  50% {scale: 100%}
+  100% {scale: 98%}
+}
+
+.playMsg {
+  animation-name: minecraft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.wordContainer {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  height: 40px;
+  width: fit-content;
+  background-color: rgb(22, 22, 22);
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.wordContainer>span{
+  width: 10px;
+  text-align: center;
+  color: black;
+  border-radius: 8px;
+  padding: 15px 20px;
+  background-color: white;
+}
+
+

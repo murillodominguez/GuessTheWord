@@ -8,7 +8,7 @@ const Logo = () => {
 
 const Button = ({ handleClick }) => {
   return (
-      <button onClick={handleClick}>Start</button>
+      <button className={styles.button} onClick={handleClick}>Start</button>
   )
 }
 
@@ -16,7 +16,7 @@ const StartScreen = ({ startGame }) => {
   return (
     <div>
     <Logo />
-    <Button handleClick={startGame}/>
+    <Button handleClick={startGame} />
     </div>
   )
 }
