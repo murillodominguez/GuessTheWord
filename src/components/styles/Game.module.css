@@ -4,6 +4,18 @@
   align-items: center;
 }
 
+.playMsg {
+  margin-top: 10dvh;
+  animation-name: minecraft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.letter {
+  text-transform: uppercase;
+}
+
 .sendLetter {
   font-size: 1.2em;
   border: solid 1px rgb(180, 180, 180);
@@ -46,13 +58,6 @@
   100% {scale: 98%}
 }
 
-.playMsg {
-  animation-name: minecraft;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
 .wordContainer {
   display: flex;
   justify-content: center;
@@ -69,7 +74,7 @@
   text-align: center;
   color: black;
   border-radius: 8px;
-  padding: 15px 20px;
+  padding: 12px 20px;
   background-color: white;
 }
 

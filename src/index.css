@@ -9,9 +9,11 @@ html, body {
 }
 
 body {
+  display: flex;
+  justify-content: center;
   padding: 0;
   margin: 0;
-  background-color: rgb(43, 43, 43);
+  background-color: rgb(39, 39, 39);
   color: white;
 }
 

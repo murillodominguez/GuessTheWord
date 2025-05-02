@@ -3,7 +3,16 @@ import { useState, useRef } from 'react';
 
 const playMsgList = ["C'mon, guess!", "Try your best to guess this word!", "This one is for you, take your time!", "Guess this word.", "GuessTheWord!!"]
 
-const Game = ({ verifyLetter, category, word, letters, lettersFound, wrongLetters, guesses, score}) => {
+const Game = ({
+  verifyLetter,
+  category,
+  word,
+  letters,
+  lettersFound,
+  wrongLetters,
+  guesses,
+  score
+}) => {
 
   const [playMsg] = useState(playMsgList[Math.floor(Math.random() * 5)]);
   const [letter, setLetter] = useState("");
@@ -40,7 +49,7 @@ const Game = ({ verifyLetter, category, word, letters, lettersFound, wrongLetter
       </div>
       <div className="wrongLettersContainer">
         <p>Letters already used:</p>
-        {wrongLetters.map((letter,i) => i == (wrongLetters.length)-1 ? <span key={i}>{letter}</span> : <span key={i}>{letter}, </span>)}
+        {wrongLetters.map((letter,i) => i === (wrongLetters.length)-1 ? <span key={i}>{letter}</span> : <span key={i}>{letter}, </span>)}
       </div>
     </div>
   )
