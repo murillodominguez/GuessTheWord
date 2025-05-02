@@ -1,0 +1,32 @@
+h2 .score {
+  color: yellow;
+  font-size: 1.5em;
+  position: relative;
+  top: 4px;
+}
+
+.gameOver {
+  color: rgb(197, 148, 148);
+}
+
+.button {
+  color: white;
+}
+
+@keyframes rainbow {
+  10% {color: red}
+  20% {color: orange}
+  30% {color: yellow}
+  40% {color: green}
+  50% {color: rgb(109, 178, 201)}
+  60% {color: blue}
+  70% {color: purple}
+}
+
+.button:hover{
+  animation-name: rainbow;
+  animation-timing-function: ease-in-out;
+  animation-duration: 800ms;
+  animation-iteration-count: infinite;
+}
+

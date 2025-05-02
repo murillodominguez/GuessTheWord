@@ -7,8 +7,9 @@
 .sendLetter {
   font-size: 1.2em;
   border: solid 1px rgb(180, 180, 180);
-  padding: 5px;
+  padding: 0 10px;
   height: 100%;
+  text-align: center;
   border-radius: 8px;
   background-color: rgb(212, 212, 212);
   transition: ease-in all 300ms;
@@ -32,7 +33,7 @@
   outline: none;
 }
 
-form {
+.letterContainer form {
   height: 40px;
   display: flex;
   gap: 10px;
