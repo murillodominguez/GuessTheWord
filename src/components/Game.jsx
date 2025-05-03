@@ -1,10 +1,14 @@
 import styles from "./styles/Game.module.css";
 import { useState, useRef } from 'react';
 
-const playMsgList = ["C'mon, guess!", "Try your best to guess this word!", "This one is for you, take your time!", "Guess this word.", "GuessTheWord!!"]
-
+const guessesStates = {
+  1: ["red", "20pt"],
+  2: ["yellow", "15pt"],
+  3: ["greenyellow", "12pt"]
+}
 const Game = ({
   verifyLetter,
+  playMsg,
   category,
   word,
   letters,
@@ -14,7 +18,6 @@ const Game = ({
   score
 }) => {
 
-  const [playMsg] = useState(playMsgList[Math.floor(Math.random() * 5)]);
   const [letter, setLetter] = useState("");
   const letterInputRef = useRef(null);
 
@@ -36,7 +39,7 @@ const Game = ({
       <h3 className={styles.tip}>
         Tip: <span style={{color: "yellow"}}>{category}</span>
       </h3>
-      <p>You still got {guesses} try(s)</p>
+      <p>You still got <span style={ guesses !== 0 ? {color: guessesStates[guesses][0], fontSize: guessesStates[guesses][1]} : null}>{guesses}</span> try(s)</p>
       <div className={styles.wordContainer}>
         {letters.map((letter, i) => lettersFound.includes(letter) ? <span key={i} className={styles.letter}>{letter}</span> : <span key={i} className={styles.letter}></span>)}
       </div>

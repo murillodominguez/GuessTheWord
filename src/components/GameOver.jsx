@@ -7,6 +7,7 @@ const Button = ({ handleClick }) => {
 }
 
 const GameOver = ({ retry, score }) => {
+
   return (
     <div className="gameOverContainer">
       <h1 className={styles.gameOver}>Game Over!</h1>

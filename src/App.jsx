@@ -2,7 +2,7 @@ import './App.css';
 
 import { useCallback, useEffect, useState } from 'react';
 
-import { words as wordList } from "./data/words.js";
+import { words as wordList, playMsgList } from "./data/words.js";
 
 import StartScreen from './components/StartScreen.jsx';
 import Game from './components/Game.jsx';
@@ -17,7 +17,7 @@ const stages = [
 function App() {
   const [gameStage, setGameStage] = useState(stages[0].name)
   const [words] = useState(wordList);
-
+  const [playMsg, setPlayMsg] = useState("");
   const [pickedWord, setPickedWord] = useState("");
   const [pickedCategory, setPickedCategory] = useState("");
   const [letters, setLetters] = useState([]);
@@ -40,7 +40,7 @@ function App() {
   }, [words]);
 
   const startGame = useCallback(() => {
-    
+    setPlayMsg(playMsgList[Math.floor(Math.random() * playMsgList.length)])
     clearLettersStates();
 
     const category = pickCategory();
@@ -109,7 +109,7 @@ function App() {
   return (
     <div className="App">
       {gameStage === 'start' && <StartScreen startGame={startGame} />}
-      {gameStage === 'game' && <Game verifyLetter={verifyLetter} category={pickedCategory} word={pickedWord} letters={letters} lettersFound={lettersFound} wrongLetters={wrongLetters} guesses={guesses} score={score} />}
+      {gameStage === 'game' && <Game verifyLetter={verifyLetter} playMsg={playMsg} category={pickedCategory} word={pickedWord} letters={letters} lettersFound={lettersFound} wrongLetters={wrongLetters} guesses={guesses} score={score} />}
       {gameStage === 'end' && <GameOver retry={retry} score={score} />}
     </div>
   );

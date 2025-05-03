@@ -6,3 +6,5 @@ export const words = {
   computador: ["Mouse", "Teclado", "Monitor"],
   esporte: ["Futebol", "Voleibol", "Badminton", "Marcação", "Bola"]
 }
+
+export const playMsgList = ["C'mon, guess!", "Try your best to guess this word!", "This one is for you, take your time!", "Guess this word.", "GuessTheWord!!"]
